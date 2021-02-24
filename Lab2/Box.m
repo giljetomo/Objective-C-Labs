@@ -28,7 +28,7 @@
 
 - (int) howManyBoxesFitsWith:(Box *) box
 {
-    Box *largeBox = [self volume] == MAX([self volume], [box volume]) ? self : box;
+    Box *largeBox = [self volume] > [box volume] ? self : box;
     Box *smallBox = [self isEqualTo: largeBox] ? box : self;
     
     return (int) [self divide:[largeBox width] by:[smallBox width]] *
