@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4EDEF67B25E45881004E6E1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEF67A25E45881004E6E1C /* main.m */; };
 		4EDEF68A25E4657D004E6E1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEF68925E4657D004E6E1C /* main.m */; };
+		5281146825E5CB62007F3278 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 5281146725E5CB62007F3278 /* Box.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		4EDEF67A25E45881004E6E1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EDEF68725E4657D004E6E1C /* Lab2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab2; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDEF68925E4657D004E6E1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5281146625E5CB62007F3278 /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		5281146725E5CB62007F3278 /* Box.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				4EDEF68925E4657D004E6E1C /* main.m */,
+				5281146625E5CB62007F3278 /* Box.h */,
+				5281146725E5CB62007F3278 /* Box.m */,
 			);
 			path = Lab2;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 					};
 					4EDEF68625E4657D004E6E1C = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -177,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EDEF68A25E4657D004E6E1C /* main.m in Sources */,
+				5281146825E5CB62007F3278 /* Box.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,20 +326,39 @@
 		4EDEF68C25E4657D004E6E1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QZTHY59Q97;
+				DEVELOPMENT_TEAM = AYHFX5HL8Z;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lab2/Lab2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		4EDEF68D25E4657D004E6E1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QZTHY59Q97;
+				DEVELOPMENT_TEAM = AYHFX5HL8Z;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lab2/Lab2-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
