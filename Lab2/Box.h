@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign) float height;
 @property (assign) float width;
 @property (assign) float length;
+@property (assign) float volume;
 
 //public methods
 - (instancetype)initWithLength:(float) length width:(float) width height:(float) height;
-- (float) calculateVolume;
 - (int) howManyBoxesFitsWith:(Box *) box;
 
 @end

@@ -17,27 +17,23 @@
         _width = width;
         _height = height;
     }
+    _volume = _length * _width * _height;
     return self;
 }
 
-- (float) calculateVolume
+- (float) divide:(float) num1 by:(float) num2
 {
-    return _length * _width * _height;
+    return num1 / num2;
 }
 
 - (int) howManyBoxesFitsWith:(Box *) box
 {
-    float boxVolume1 = [self calculateVolume];
-    float boxVolume2 = [box calculateVolume];
+    Box *largeBox = [self volume] == MAX([self volume], [box volume]) ? self : box;
+    Box *smallBox = [self isEqualTo: largeBox] ? box : self;
     
-    Box *largeBox = boxVolume1 == MAX(boxVolume1, boxVolume2) ? self : box;
-    Box *smallBox = boxVolume1 == MIN(boxVolume1, boxVolume2) ? self : box;
-    
-    float width = [largeBox width] / [smallBox width];
-    float length = [largeBox length] / [smallBox length];
-    float height = [largeBox height] / [smallBox height];
-    
-    return (int) width * length * height;
+    return (int) [self divide:[largeBox width] by:[smallBox width]] *
+                 [self divide:[largeBox length] by:[smallBox length]] *
+                 [self divide:[largeBox height] by:[smallBox height]];
 }
 
 @end
