@@ -10,6 +10,10 @@
 		4EDEF67B25E45881004E6E1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEF67A25E45881004E6E1C /* main.m */; };
 		4EDEF68A25E4657D004E6E1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEF68925E4657D004E6E1C /* main.m */; };
 		5281146825E5CB62007F3278 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 5281146725E5CB62007F3278 /* Box.m */; };
+		5281148625E70DEF007F3278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5281148525E70DEF007F3278 /* main.m */; };
+		5281148F25E7103B007F3278 /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5281148E25E7103B007F3278 /* AdditionQuestion.m */; };
+		5281149625E71C23007F3278 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5281149525E71C23007F3278 /* InputHandler.m */; };
+		528114A225E724A7007F3278 /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = 528114A125E724A7007F3278 /* ScoreKeeper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +35,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		5281148125E70DEF007F3278 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +53,14 @@
 		4EDEF68925E4657D004E6E1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5281146625E5CB62007F3278 /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
 		5281146725E5CB62007F3278 /* Box.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
+		5281148325E70DEF007F3278 /* Lab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab3; sourceTree = BUILT_PRODUCTS_DIR; };
+		5281148525E70DEF007F3278 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5281148D25E7103B007F3278 /* AdditionQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditionQuestion.h; sourceTree = "<group>"; };
+		5281148E25E7103B007F3278 /* AdditionQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdditionQuestion.m; sourceTree = "<group>"; };
+		5281149425E71C23007F3278 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		5281149525E71C23007F3278 /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		528114A025E724A7007F3278 /* ScoreKeeper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreKeeper.h; sourceTree = "<group>"; };
+		528114A125E724A7007F3278 /* ScoreKeeper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreKeeper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +78,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5281148025E70DEF007F3278 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +93,7 @@
 			children = (
 				4EDEF67925E45881004E6E1C /* Lab1 */,
 				4EDEF68825E4657D004E6E1C /* Lab2 */,
+				5281148425E70DEF007F3278 /* Lab3 */,
 				4EDEF67825E45881004E6E1C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +103,7 @@
 			children = (
 				4EDEF67725E45881004E6E1C /* Objective-C Labs */,
 				4EDEF68725E4657D004E6E1C /* Lab2 */,
+				5281148325E70DEF007F3278 /* Lab3 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +124,20 @@
 				5281146725E5CB62007F3278 /* Box.m */,
 			);
 			path = Lab2;
+			sourceTree = "<group>";
+		};
+		5281148425E70DEF007F3278 /* Lab3 */ = {
+			isa = PBXGroup;
+			children = (
+				5281148525E70DEF007F3278 /* main.m */,
+				528114A025E724A7007F3278 /* ScoreKeeper.h */,
+				528114A125E724A7007F3278 /* ScoreKeeper.m */,
+				5281149425E71C23007F3278 /* InputHandler.h */,
+				5281149525E71C23007F3278 /* InputHandler.m */,
+				5281148D25E7103B007F3278 /* AdditionQuestion.h */,
+				5281148E25E7103B007F3278 /* AdditionQuestion.m */,
+			);
+			path = Lab3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +177,23 @@
 			productReference = 4EDEF68725E4657D004E6E1C /* Lab2 */;
 			productType = "com.apple.product-type.tool";
 		};
+		5281148225E70DEF007F3278 /* Lab3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5281148725E70DEF007F3278 /* Build configuration list for PBXNativeTarget "Lab3" */;
+			buildPhases = (
+				5281147F25E70DEF007F3278 /* Sources */,
+				5281148025E70DEF007F3278 /* Frameworks */,
+				5281148125E70DEF007F3278 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lab3;
+			productName = Lab3;
+			productReference = 5281148325E70DEF007F3278 /* Lab3 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -147,6 +208,9 @@
 					4EDEF68625E4657D004E6E1C = {
 						CreatedOnToolsVersion = 12.4;
 						LastSwiftMigration = 1240;
+					};
+					5281148225E70DEF007F3278 = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -165,6 +229,7 @@
 			targets = (
 				4EDEF67625E45881004E6E1C /* Objective-C Labs */,
 				4EDEF68625E4657D004E6E1C /* Lab2 */,
+				5281148225E70DEF007F3278 /* Lab3 */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +249,17 @@
 			files = (
 				4EDEF68A25E4657D004E6E1C /* main.m in Sources */,
 				5281146825E5CB62007F3278 /* Box.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5281147F25E70DEF007F3278 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528114A225E724A7007F3278 /* ScoreKeeper.m in Sources */,
+				5281148625E70DEF007F3278 /* main.m in Sources */,
+				5281149625E71C23007F3278 /* InputHandler.m in Sources */,
+				5281148F25E7103B007F3278 /* AdditionQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +438,28 @@
 			};
 			name = Release;
 		};
+		5281148825E70DEF007F3278 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYHFX5HL8Z;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5281148925E70DEF007F3278 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYHFX5HL8Z;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -388,6 +486,15 @@
 			buildConfigurations = (
 				4EDEF68C25E4657D004E6E1C /* Debug */,
 				4EDEF68D25E4657D004E6E1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5281148725E70DEF007F3278 /* Build configuration list for PBXNativeTarget "Lab3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5281148825E70DEF007F3278 /* Debug */,
+				5281148925E70DEF007F3278 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
