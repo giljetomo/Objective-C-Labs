@@ -9,7 +9,7 @@
 
 @implementation Dice
 
-- (int) randomize
+- (int) roll
 {
     _value = arc4random_uniform(6) + 1;
     return _value;

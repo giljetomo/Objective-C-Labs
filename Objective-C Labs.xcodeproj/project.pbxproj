@@ -25,6 +25,7 @@
 		527BED2525EABF430008AAF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BED2425EABF430008AAF6 /* main.m */; };
 		527BED3125EABF500008AAF6 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BED3025EABF500008AAF6 /* Dice.m */; };
 		527BED3A25EAC30D0008AAF6 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BED3925EAC30D0008AAF6 /* InputHandler.m */; };
+		527BED4325EAD6E30008AAF6 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BED4225EAD6E30008AAF6 /* GameController.m */; };
 		5281146825E5CB62007F3278 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 5281146725E5CB62007F3278 /* Box.m */; };
 		5281148625E70DEF007F3278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5281148525E70DEF007F3278 /* main.m */; };
 		5281148F25E7103B007F3278 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 5281148E25E7103B007F3278 /* Question.m */; };
@@ -123,6 +124,8 @@
 		527BED3025EABF500008AAF6 /* Dice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		527BED3825EAC30D0008AAF6 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputHandler.h; path = Lab4/InputHandler.h; sourceTree = SOURCE_ROOT; };
 		527BED3925EAC30D0008AAF6 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputHandler.m; path = Lab4/InputHandler.m; sourceTree = SOURCE_ROOT; };
+		527BED4125EAD6E30008AAF6 /* GameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		527BED4225EAD6E30008AAF6 /* GameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		5281146625E5CB62007F3278 /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
 		5281146725E5CB62007F3278 /* Box.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 		5281148325E70DEF007F3278 /* Lab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab3; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,6 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				527BED2425EABF430008AAF6 /* main.m */,
+				527BED4125EAD6E30008AAF6 /* GameController.h */,
+				527BED4225EAD6E30008AAF6 /* GameController.m */,
 				527BED2F25EABF500008AAF6 /* Dice.h */,
 				527BED3825EAC30D0008AAF6 /* InputHandler.h */,
 				527BED3925EAC30D0008AAF6 /* InputHandler.m */,
@@ -495,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				527BED3125EABF500008AAF6 /* Dice.m in Sources */,
+				527BED4325EAD6E30008AAF6 /* GameController.m in Sources */,
 				527BED3A25EAC30D0008AAF6 /* InputHandler.m in Sources */,
 				527BED2525EABF430008AAF6 /* main.m in Sources */,
 			);
