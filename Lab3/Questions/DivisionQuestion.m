@@ -15,9 +15,9 @@
     return self;
 }
 - (void)generateQuestion {
-    NSUInteger bigger = self.rightValue > self.leftValue ? self.rightValue : self.leftValue;
-    NSUInteger smaller = bigger == self.rightValue ? self.leftValue : self.rightValue;
-    self.answer = bigger / smaller;
-    self.question = [NSString stringWithFormat:@"%lu / %lu ?", bigger, smaller];
+    NSUInteger bigger = super.rightValue > super.leftValue ? super.rightValue : super.leftValue;
+    NSUInteger smaller = bigger == super.rightValue ? super.leftValue : super.rightValue;
+    super.answer = bigger / smaller;
+    super.question = [NSString stringWithFormat:@"%lu / %lu ?", bigger, smaller];
 }
 @end

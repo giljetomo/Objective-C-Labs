@@ -16,7 +16,7 @@
     return self;
 }
 - (void)generateQuestion {
-    self.answer = self.rightValue + self.leftValue;
-    self.question = [NSString stringWithFormat:@"%lu + %lu ?", self.rightValue, self.leftValue];
+    super.answer = super.rightValue + super.leftValue;
+    super.question = [NSString stringWithFormat:@"%lu + %lu ?", super.rightValue, super.leftValue];
 }
 @end
