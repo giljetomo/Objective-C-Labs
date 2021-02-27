@@ -6,19 +6,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
+#import "QuestionManager.h"
+#import "AdditionQuestion.h"
+#import "SubtractionQuestion.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         BOOL gameOn = YES;
-        ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
         int turns = 0;
+        ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
+        QuestionManager *qManager = [[QuestionManager alloc] init];
+        QuestionFactory *qFactory = [[QuestionFactory alloc] init];
         
         while (gameOn) {
-            AdditionQuestion *question = [[AdditionQuestion alloc] init];
+            Question *question = qFactory.generateRandomQuestion;
+            [qManager.questions addObject:question];
             NSString *str = [InputHandler prompt:question.question andSize:255];
             
             NSNumber *number = [[[NSNumberFormatter alloc] init] numberFromString: str];
@@ -27,6 +33,7 @@ int main(int argc, const char * argv[]) {
                 BOOL rightAnswer = [number unsignedIntegerValue] == question.answer;
                 rightAnswer ? scoreKeeper.right++ : scoreKeeper.wrong++;
                 NSLog(@"%@", rightAnswer ? @"Right!" : @"Wrong!");
+                NSLog(@"%@", [qManager timeOutput]);
                 
                 float percentage = ((float)scoreKeeper.right/turns) * 100 ;
                 NSLog(@"%@ ---- %.2f%%", scoreKeeper.retrieveScore, percentage);
