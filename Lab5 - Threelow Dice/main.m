@@ -47,6 +47,9 @@ int main(int argc, const char * argv[]) {
                 } else {
                     NSLog(@"%@", @"Invalid selection.");
                 }
+            } else if ([input.lowercaseString isEqualToString: @"reset"]) {
+                [gameController resetDice];
+                [gameController printBoard];
             }
         }
     }

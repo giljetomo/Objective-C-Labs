@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)holdDie:(Dice *) dice withNumber:(NSNumber *) number;
 - (void)printBoard;
+- (void)resetDice;
 @end
 
 NS_ASSUME_NONNULL_END

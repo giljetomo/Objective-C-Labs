@@ -47,4 +47,8 @@
     NSLog(@"%@", [diceBoard stringByAppendingString:strScore]);
 }
 
+- (void)resetDice {
+    [_heldDice removeAllObjects];
+}
+
 @end
