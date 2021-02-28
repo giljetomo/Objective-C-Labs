@@ -15,12 +15,14 @@
         _dice = [NSMutableArray new];
         _heldDice = [NSMutableDictionary new];
         _rollsRemaining = 5;
+        _didSelect = YES;
     }
     return self;
 }
 - (void)holdDie:(Dice *) dice withNumber:(NSNumber *) number {
     if([_heldDice objectForKey:number] == nil) {
         [_heldDice setObject:dice forKey: number];
+        _didSelect = YES;
     } else {
         NSLog(@"Die #%@ was released.", number);
         [_heldDice removeObjectForKey:number];
@@ -38,6 +40,7 @@
     [_dice enumerateObjectsUsingBlock:^(Dice * _Nonnull die, NSUInteger idx, BOOL * _Nonnull stop) {
         if([_heldDice allKeysForObject:die].count == 0) {
             if (willRoll) {
+                _didSelect = NO;
                 [die roll];
             }
             [diceBoard appendString: [NSString stringWithFormat:@" %@ ", [dieFaces objectAtIndex:[_dice[idx] value] - 1]]];

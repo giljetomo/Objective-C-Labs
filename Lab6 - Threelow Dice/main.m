@@ -28,9 +28,13 @@ int main(int argc, const char * argv[]) {
             NSString *input = [InputHandler prompt:@"\n'roll' to roll the dice\n'hold' to hold a dice\n'reset' to un-hold all dice\n'done' to end the game\n'display' to show current stats" andSize:255];
             
             if([input.lowercaseString isEqualToString: @"roll"]) {
-                [gameController setRollsRemaining: [gameController rollsRemaining] - 1];
                 if (gameController.rollsRemaining != 0) {
-                    [gameController printBoardWithRoll:YES];
+                    if (gameController.didSelect == NO) {
+                        NSLog(@"Choose a die first before rolling again.");
+                    } else {
+                        [gameController setRollsRemaining: [gameController rollsRemaining] - 1];
+                        [gameController printBoardWithRoll:YES];
+                    }
                 }
             }
             else if ([input.lowercaseString isEqualToString: @"hold"]) {

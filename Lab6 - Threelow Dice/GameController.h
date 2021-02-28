@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableArray <Dice *> *dice;
 @property (nonatomic, strong) NSMutableDictionary *heldDice;
 @property (nonatomic, assign) int rollsRemaining;
+@property (nonatomic, assign) BOOL didSelect;
 
 - (void)holdDie:(Dice *) dice withNumber:(NSNumber *) number;
 - (void)printBoardWithRoll:(BOOL) willRoll;
