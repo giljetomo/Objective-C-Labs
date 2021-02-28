@@ -15,11 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableDictionary *heldDice;
 @property (nonatomic, assign) int rollsRemaining;
 @property (nonatomic, assign) BOOL didSelect;
+@property (nonatomic, assign) int topScore;
 
 - (void)holdDie:(Dice *) dice withNumber:(NSNumber *) number;
 - (void)printBoardWithRoll:(BOOL) willRoll;
 - (void)selectRemainingDice;
 - (void)resetDice;
+- (void)calculateTopScore;
 @end
 
 NS_ASSUME_NONNULL_END

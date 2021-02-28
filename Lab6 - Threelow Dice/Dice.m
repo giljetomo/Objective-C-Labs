@@ -9,9 +9,8 @@
 
 @implementation Dice
 
-- (int) roll
+- (void) roll
 {
     _value = arc4random_uniform(6) + 1;
-    return _value;
 }
 @end

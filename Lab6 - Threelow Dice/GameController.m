@@ -16,6 +16,7 @@
         _heldDice = [NSMutableDictionary new];
         _rollsRemaining = 5;
         _didSelect = YES;
+        _topScore = 30;
     }
     return self;
 }
@@ -26,15 +27,23 @@
     } else {
         NSLog(@"Die #%@ was released.", number);
         [_heldDice removeObjectForKey:number];
+        _didSelect = NO;
     }
 }
-
+-(void)calculateTopScore {
+    int total = 0;
+    for (NSNumber *key in _heldDice) {
+        Dice *dice = [_heldDice objectForKey:key];
+        total += dice.value;
+    }
+    _topScore = total < _topScore ? total : _topScore;
+}
 - (void)printBoardWithRoll:(BOOL) willRoll {
     NSArray *dieFaces = @[@"⚀", @"⚁", @"⚂", @"⚃", @"⚄", @"⚅"];
     __block int score = 0;
     NSMutableString *diceBoard = [NSMutableString new];
     
-    NSLog(@"_______Current Dice______");
+    NSLog(@"________Current Dice________");
     NSLog(@" ");
     
     [_dice enumerateObjectsUsingBlock:^(Dice * _Nonnull die, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -53,9 +62,9 @@
     
     NSLog(@"%@", diceBoard);
     NSLog(@" ");
-    NSLog(@"-------------------------");
-    NSLog(@"      Total Score: %d", score);
-    NSLog(@"-------------------------");
+    NSLog(@"----------------------------");
+    NSLog(@"Score: %d - Leaderboard: %d", score, _topScore);
+    NSLog(@"----------------------------");
     NSLog(@"    Rolls Remaining: %d", _rollsRemaining);
 }
 - (void)selectRemainingDice {
@@ -68,6 +77,8 @@
 
 - (void)resetDice {
     [_heldDice removeAllObjects];
+    _rollsRemaining = 4;
+    _didSelect = NO;
 }
 
 @end
