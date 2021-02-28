@@ -20,38 +20,51 @@ int main(int argc, const char * argv[]) {
         NSMutableArray *dice = [NSMutableArray arrayWithObjects:d1, d2, d3, d4, d5, nil];
         
         GameController *gameController = [[GameController alloc] init];
-        [gameController.dice addObjectsFromArray:dice];
+        [gameController.dice addObjectsFromArray: dice];
         
         BOOL gameOn = YES;
         
-        while(gameOn) {
-        
+        while(gameOn && gameController.rollsRemaining > 0) {
             NSString *input = [InputHandler prompt:@"\n'roll' to roll the dice\n'hold' to hold a dice\n'reset' to un-hold all dice\n'done' to end the game\n'display' to show current stats" andSize:255];
+            
             if([input.lowercaseString isEqualToString: @"roll"]) {
-    
-                [gameController printBoard];
-                
-            } else if ([input.lowercaseString isEqualToString: @"hold"]) {
+                [gameController setRollsRemaining: [gameController rollsRemaining] - 1];
+                if (gameController.rollsRemaining != 0) {
+                    [gameController printBoardWithRoll:YES];
+                }
+            }
+            else if ([input.lowercaseString isEqualToString: @"hold"]) {
                 NSString *input = [InputHandler prompt:@"\nEnter the number of the die:  " andSize:255];
                 NSNumber *dieNumber = [[[NSNumberFormatter alloc] init] numberFromString: input];
                 
                 //if (1)input is a number (2)is between 1 and 6 (3)dice have been rolled
                 if (dieNumber != nil && (dieNumber.integerValue > 0 && dieNumber.integerValue < 6) && d1.value != 0) {
-                    
                     Dice *die = [dice objectAtIndex:dieNumber.unsignedIntegerValue-1];
                     [gameController holdDie:die withNumber:dieNumber];
                     
-                    for (NSNumber *key in [gameController.heldDice allKeys]) {
-                        NSLog(@"%d", [(Dice *)[gameController.heldDice objectForKey:key] value]);
+                    if (gameController.heldDice.allValues.count == 5) {
+                        gameOn = NO;
+                    } else {
+                        [gameController printBoardWithRoll:NO];
                     }
                 } else {
                     NSLog(@"%@", @"Invalid selection.");
                 }
-            } else if ([input.lowercaseString isEqualToString: @"reset"]) {
+            }
+            else if ([input.lowercaseString isEqualToString: @"reset"]) {
                 [gameController resetDice];
-                [gameController printBoard];
+                [gameController printBoardWithRoll:NO];
+            }
+            else if (([input.lowercaseString isEqualToString: @"display"])) {
+                [gameController printBoardWithRoll:NO];
             }
         }
+        NSLog(@" ");
+        [gameController selectRemainingDice];
+        [gameController printBoardWithRoll:NO];
+        NSLog(@" ");
+        NSLog(@">>>>>>> GAME OVER <<<<<<<");
+        NSLog(@" ");
     }
     return 0;
 }

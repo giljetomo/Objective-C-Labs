@@ -14,11 +14,11 @@
     if (self) {
         _dice = [NSMutableArray new];
         _heldDice = [NSMutableDictionary new];
+        _rollsRemaining = 5;
     }
     return self;
 }
 - (void)holdDie:(Dice *) dice withNumber:(NSNumber *) number {
-    
     if([_heldDice objectForKey:number] == nil) {
         [_heldDice setObject:dice forKey: number];
     } else {
@@ -27,14 +27,19 @@
     }
 }
 
-- (void)printBoard {
+- (void)printBoardWithRoll:(BOOL) willRoll {
     NSArray *dieFaces = @[@"⚀", @"⚁", @"⚂", @"⚃", @"⚄", @"⚅"];
     __block int score = 0;
     NSMutableString *diceBoard = [NSMutableString new];
     
+    NSLog(@"_______Current Dice______");
+    NSLog(@" ");
+    
     [_dice enumerateObjectsUsingBlock:^(Dice * _Nonnull die, NSUInteger idx, BOOL * _Nonnull stop) {
         if([_heldDice allKeysForObject:die].count == 0) {
-            [die roll];
+            if (willRoll) {
+                [die roll];
+            }
             [diceBoard appendString: [NSString stringWithFormat:@" %@ ", [dieFaces objectAtIndex:[_dice[idx] value] - 1]]];
         } else {
             Dice *selectedDie = [_heldDice objectForKey:[NSNumber numberWithUnsignedInteger:idx + 1]];
@@ -43,8 +48,19 @@
         }
     }];
     
-    NSString *strScore = [NSString stringWithFormat:@" - Score: %d", score];
-    NSLog(@"%@", [diceBoard stringByAppendingString:strScore]);
+    NSLog(@"%@", diceBoard);
+    NSLog(@" ");
+    NSLog(@"-------------------------");
+    NSLog(@"      Total Score: %d", score);
+    NSLog(@"-------------------------");
+    NSLog(@"    Rolls Remaining: %d", _rollsRemaining);
+}
+- (void)selectRemainingDice {
+    [_dice enumerateObjectsUsingBlock:^(Dice * _Nonnull die, NSUInteger idx, BOOL * _Nonnull stop) {
+        if([_heldDice allKeysForObject:die].count == 0) {
+            [self holdDie:die withNumber:[NSNumber numberWithUnsignedInteger:idx + 1]];
+        }
+    }];
 }
 
 - (void)resetDice {
