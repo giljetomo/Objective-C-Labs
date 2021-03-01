@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)selectRemainingDice;
 - (void)resetDice;
 - (void)calculateTopScore;
+- (void)cheat;
 @end
 
 NS_ASSUME_NONNULL_END

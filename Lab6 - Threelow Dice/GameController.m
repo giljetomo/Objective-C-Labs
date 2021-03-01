@@ -79,5 +79,12 @@
     _rollsRemaining = 4;
     _didSelectCount = 1;
 }
+- (void)cheat {
+    [_heldDice removeAllObjects];
+    [_dice enumerateObjectsUsingBlock:^(Dice * _Nonnull die, NSUInteger idx, BOOL * _Nonnull stop) {
+        die.value = 1;
+        [self holdDie:die withNumber:[NSNumber numberWithUnsignedInteger:idx + 1]];
+    }];
+}
 
 @end

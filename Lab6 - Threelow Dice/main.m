@@ -80,6 +80,10 @@ int main(int argc, const char * argv[]) {
                 [gameController resetDice];
                 [gameController printBoardWithRoll:YES];
             }
+            else if (([input.lowercaseString isEqualToString: @"rofl"])) {
+                [gameController cheat];
+                [gameController printBoardWithRoll:NO];
+            }
         }
         NSLog(@" ");
         NSLog(@">>>>>>> GAME OVER <<<<<<<");
