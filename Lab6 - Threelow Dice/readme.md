@@ -1,4 +1,4 @@
-#Threelow Game
+# Threelow Game
 
 The game we're going to make is called 'Threelow'. It's similar to Yahtzee, but
 with much simpler scoring. To play, a player rolls five dice. The goal is to get
