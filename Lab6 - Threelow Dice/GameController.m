@@ -29,6 +29,9 @@
         [_heldDice removeObjectForKey:number];
         _didSelectCount--;
     }
+    if (_heldDice.allValues.count == 5) {
+        [self calculateTopScore];
+    }
 }
 -(void)calculateTopScore {
     int total = 0;
@@ -62,13 +65,16 @@
     NSLog(@"%@", diceBoard);
     NSLog(@" ");
     NSLog(@"----------------------------");
-    NSLog(@"Score: %d - Leaderboard: %d", score, _topScore);
+    NSLog(@" Score: %d - Leaderboard: %d", score, _topScore);
     NSLog(@"----------------------------");
     NSLog(@"    Rolls Remaining: %d", _rollsRemaining);
 }
-- (void)selectRemainingDice {
+- (void)selectRemainingDiceWithRoll:(BOOL) withRoll {
     [_dice enumerateObjectsUsingBlock:^(Dice * _Nonnull die, NSUInteger idx, BOOL * _Nonnull stop) {
         if([_heldDice allKeysForObject:die].count == 0) {
+            if(withRoll) {
+                [die roll];
+            }
             [self holdDie:die withNumber:[NSNumber numberWithUnsignedInteger:idx + 1]];
         }
     }];
@@ -77,7 +83,7 @@
 - (void)resetDice {
     [_heldDice removeAllObjects];
     _rollsRemaining = 4;
-    _didSelectCount = 1;
+    _didSelectCount = 0;
 }
 - (void)cheat {
     [_heldDice removeAllObjects];
@@ -85,6 +91,7 @@
         die.value = 3;
         [self holdDie:die withNumber:[NSNumber numberWithUnsignedInteger:idx + 1]];
     }];
+    [self calculateTopScore];
 }
 
 @end

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)holdDie:(Dice *) dice withNumber:(NSNumber *) number;
 - (void)printBoardWithRoll:(BOOL) willRoll;
-- (void)selectRemainingDice;
+- (void)selectRemainingDiceWithRoll:(BOOL) withRoll;
 - (void)resetDice;
 - (void)calculateTopScore;
 - (void)cheat;
