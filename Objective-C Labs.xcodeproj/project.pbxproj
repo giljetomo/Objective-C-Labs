@@ -24,8 +24,8 @@
 		527BED0E25E9E43C0008AAF6 /* DivisionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BED0D25E9E43C0008AAF6 /* DivisionQuestion.m */; };
 		527BED2525EABF430008AAF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BED2425EABF430008AAF6 /* main.m */; };
 		527BED3125EABF500008AAF6 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BED3025EABF500008AAF6 /* Dice.m */; };
-		527BED3A25EAC30D0008AAF6 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BED3925EAC30D0008AAF6 /* InputHandler.m */; };
 		527BED4325EAD6E30008AAF6 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BED4225EAD6E30008AAF6 /* GameController.m */; };
+		527BED6425EB771B0008AAF6 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BED6325EB771B0008AAF6 /* InputHandler.m */; };
 		5281146825E5CB62007F3278 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 5281146725E5CB62007F3278 /* Box.m */; };
 		5281148625E70DEF007F3278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5281148525E70DEF007F3278 /* main.m */; };
 		5281148F25E7103B007F3278 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 5281148E25E7103B007F3278 /* Question.m */; };
@@ -118,14 +118,14 @@
 		527BED0525E9E3A10008AAF6 /* MultiplicationQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiplicationQuestion.m; sourceTree = "<group>"; };
 		527BED0C25E9E43C0008AAF6 /* DivisionQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DivisionQuestion.h; sourceTree = "<group>"; };
 		527BED0D25E9E43C0008AAF6 /* DivisionQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DivisionQuestion.m; sourceTree = "<group>"; };
-		527BED2225EABF430008AAF6 /* Lab5 - Threelow Dice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lab5 - Threelow Dice"; sourceTree = BUILT_PRODUCTS_DIR; };
+		527BED2225EABF430008AAF6 /* Lab6 - Threelow Dice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lab6 - Threelow Dice"; sourceTree = BUILT_PRODUCTS_DIR; };
 		527BED2425EABF430008AAF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		527BED2F25EABF500008AAF6 /* Dice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
 		527BED3025EABF500008AAF6 /* Dice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		527BED3825EAC30D0008AAF6 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputHandler.h; path = Lab4/InputHandler.h; sourceTree = SOURCE_ROOT; };
-		527BED3925EAC30D0008AAF6 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputHandler.m; path = Lab4/InputHandler.m; sourceTree = SOURCE_ROOT; };
 		527BED4125EAD6E30008AAF6 /* GameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		527BED4225EAD6E30008AAF6 /* GameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		527BED6325EB771B0008AAF6 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputHandler.m; path = Lab4/InputHandler.m; sourceTree = SOURCE_ROOT; };
 		5281146625E5CB62007F3278 /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
 		5281146725E5CB62007F3278 /* Box.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 		5281148325E70DEF007F3278 /* Lab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab3; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,7 +192,7 @@
 				5281148425E70DEF007F3278 /* Lab3 */,
 				527BEC6625E85EC90008AAF6 /* Lab4 */,
 				527BECA525E96D030008AAF6 /* Lab13 */,
-				527BED2325EABF430008AAF6 /* Lab5 - Threelow Dice */,
+				527BED2325EABF430008AAF6 /* Lab6 - Threelow Dice */,
 				4EDEF67825E45881004E6E1C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 				5281148325E70DEF007F3278 /* Lab3 */,
 				527BEC6525E85EC90008AAF6 /* Lab4 */,
 				527BECA425E96D030008AAF6 /* Lab13 */,
-				527BED2225EABF430008AAF6 /* Lab5 - Threelow Dice */,
+				527BED2225EABF430008AAF6 /* Lab6 - Threelow Dice */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			path = Questions;
 			sourceTree = "<group>";
 		};
-		527BED2325EABF430008AAF6 /* Lab5 - Threelow Dice */ = {
+		527BED2325EABF430008AAF6 /* Lab6 - Threelow Dice */ = {
 			isa = PBXGroup;
 			children = (
 				527BED2425EABF430008AAF6 /* main.m */,
@@ -279,10 +279,10 @@
 				527BED4225EAD6E30008AAF6 /* GameController.m */,
 				527BED2F25EABF500008AAF6 /* Dice.h */,
 				527BED3825EAC30D0008AAF6 /* InputHandler.h */,
-				527BED3925EAC30D0008AAF6 /* InputHandler.m */,
+				527BED6325EB771B0008AAF6 /* InputHandler.m */,
 				527BED3025EABF500008AAF6 /* Dice.m */,
 			);
-			path = "Lab5 - Threelow Dice";
+			path = "Lab6 - Threelow Dice";
 			sourceTree = "<group>";
 		};
 		5281148425E70DEF007F3278 /* Lab3 */ = {
@@ -371,9 +371,9 @@
 			productReference = 527BECA425E96D030008AAF6 /* Lab13 */;
 			productType = "com.apple.product-type.tool";
 		};
-		527BED2125EABF430008AAF6 /* Lab5 - Threelow Dice */ = {
+		527BED2125EABF430008AAF6 /* Lab6 - Threelow Dice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 527BED2625EABF430008AAF6 /* Build configuration list for PBXNativeTarget "Lab5 - Threelow Dice" */;
+			buildConfigurationList = 527BED2625EABF430008AAF6 /* Build configuration list for PBXNativeTarget "Lab6 - Threelow Dice" */;
 			buildPhases = (
 				527BED1E25EABF430008AAF6 /* Sources */,
 				527BED1F25EABF430008AAF6 /* Frameworks */,
@@ -383,9 +383,9 @@
 			);
 			dependencies = (
 			);
-			name = "Lab5 - Threelow Dice";
+			name = "Lab6 - Threelow Dice";
 			productName = "Lab5 - Threelow Dice";
-			productReference = 527BED2225EABF430008AAF6 /* Lab5 - Threelow Dice */;
+			productReference = 527BED2225EABF430008AAF6 /* Lab6 - Threelow Dice */;
 			productType = "com.apple.product-type.tool";
 		};
 		5281148225E70DEF007F3278 /* Lab3 */ = {
@@ -452,7 +452,7 @@
 				5281148225E70DEF007F3278 /* Lab3 */,
 				527BEC6425E85EC90008AAF6 /* Lab4 */,
 				527BECA325E96D030008AAF6 /* Lab13 */,
-				527BED2125EABF430008AAF6 /* Lab5 - Threelow Dice */,
+				527BED2125EABF430008AAF6 /* Lab6 - Threelow Dice */,
 			);
 		};
 /* End PBXProject section */
@@ -501,8 +501,8 @@
 			files = (
 				527BED3125EABF500008AAF6 /* Dice.m in Sources */,
 				527BED4325EAD6E30008AAF6 /* GameController.m in Sources */,
-				527BED3A25EAC30D0008AAF6 /* InputHandler.m in Sources */,
 				527BED2525EABF430008AAF6 /* main.m in Sources */,
+				527BED6425EB771B0008AAF6 /* InputHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,7 +834,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		527BED2625EABF430008AAF6 /* Build configuration list for PBXNativeTarget "Lab5 - Threelow Dice" */ = {
+		527BED2625EABF430008AAF6 /* Build configuration list for PBXNativeTarget "Lab6 - Threelow Dice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				527BED2725EABF430008AAF6 /* Debug */,
