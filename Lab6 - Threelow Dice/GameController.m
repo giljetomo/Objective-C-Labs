@@ -34,7 +34,7 @@
     int total = 0;
     for (NSNumber *key in _heldDice) {
         Dice *dice = [_heldDice objectForKey:key];
-        total += dice.value;
+        total += dice.value == 3 ? 0 : dice.value;
     }
     _topScore = total < _topScore ? total : _topScore;
 }
@@ -55,7 +55,7 @@
         } else {
             Dice *selectedDie = [_heldDice objectForKey:[NSNumber numberWithUnsignedInteger:idx + 1]];
             [diceBoard appendString: [NSString stringWithFormat:@" [%@] ", [dieFaces objectAtIndex: selectedDie.value-1]]];
-            score += selectedDie.value;
+            score += selectedDie.value == 3 ? 0 : selectedDie.value;
         }
     }];
     
@@ -82,7 +82,7 @@
 - (void)cheat {
     [_heldDice removeAllObjects];
     [_dice enumerateObjectsUsingBlock:^(Dice * _Nonnull die, NSUInteger idx, BOOL * _Nonnull stop) {
-        die.value = 1;
+        die.value = 3;
         [self holdDie:die withNumber:[NSNumber numberWithUnsignedInteger:idx + 1]];
     }];
 }
