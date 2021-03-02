@@ -2,7 +2,7 @@
 //  main.m
 //  Lab5 - Threelow Dice
 //
-//  Created by Macbook Pro on 2021-02-27.
+//  Created by Gil Jetomo on 2021-02-27.
 //
 
 #import <Foundation/Foundation.h>
@@ -76,7 +76,11 @@ int main(int argc, const char * argv[]) {
                 [gameController printBoardWithRoll:YES];
             }
             else if (([input.lowercaseString isEqualToString: @"display"])) {
-                [gameController printBoardWithRoll:NO];
+                if (d1.value != 0) {
+                    [gameController printBoardWithRoll:NO];
+                    continue;
+                }
+                NSLog(@"You need to roll the dice first.");
             }
             else if (([input.lowercaseString isEqualToString: @"new game"])) {
                 [gameController setTopScore:30];
@@ -89,7 +93,7 @@ int main(int argc, const char * argv[]) {
             }
             else if (([input.lowercaseString isEqualToString: @"done"])) {
                 if (gameController.heldDice.allValues.count < 5) {
-                    [gameController selectRemainingDiceWithRoll: NO];
+                    [gameController selectRemainingDiceWithRoll:NO];
                 }
                 gameOn = NO;
             }
