@@ -42,9 +42,9 @@ int main(int argc, const char * argv[])
             //make meatlovers pizza
             if (commandWords.count > 1) {
                 NSString *toppingCombination = commandWords[1];
+                //calling isValidSize method will also set the value of preferredSize (static class property)
                 if(size.isValidSize && [toppingCombination.lowercaseString isEqualToString:@"meatlovers"]) {
-                    enum pizzaSize pizzaSize = size.getSize;
-                    Pizza *pizza = [restaurantKitchen makeMeatLoversWithSize:pizzaSize];
+                    Pizza *pizza = [restaurantKitchen makeMeatLoversWithSize:[Pizza preferredSize]];
                     NSLog(@"%@", pizza);
                     continue;
                 }
@@ -66,8 +66,7 @@ int main(int argc, const char * argv[])
                 continue;
             }
             //make custom pizza
-            enum pizzaSize pizzaSize = size.getSize;
-            Pizza *pizza = [restaurantKitchen makePizzaWithSize:pizzaSize toppings:toppings];
+            Pizza *pizza = [restaurantKitchen makePizzaWithSize:[Pizza preferredSize] toppings:toppings];
             NSLog(@"%@", pizza);
         }
     }

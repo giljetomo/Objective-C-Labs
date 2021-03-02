@@ -8,6 +8,8 @@
 #import "Pizza.h"
 
 @implementation Pizza
+//name should be the same in .h file
+static enum pizzaSize preferredSize;
 
 - (instancetype)initWithSize:(enum pizzaSize) size toppings:(NSArray *) toppings
 {
@@ -26,9 +28,13 @@
 + (instancetype)meatLoverWithSize:(enum pizzaSize) size {
     return [[self new]initWithSize:size toppings:[NSArray arrayWithObjects:@"ham", @"cheese", nil]];
 }
-
-- (enum pizzaSize)getSize {
-    return _size;
+//getter method - name should be same as property name
++ (enum pizzaSize)preferredSize {
+    return preferredSize;
+}
+//setter method - set+PropertyName
++ (void)setPreferredSize:(enum pizzaSize) size {
+    preferredSize = size;
 }
 
 - (NSArray *)getToppings {

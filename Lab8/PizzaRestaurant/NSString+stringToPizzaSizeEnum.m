@@ -12,25 +12,17 @@
 
 - (BOOL)isValidSize {
     if([self.lowercaseString isEqualToString: @"small"]) {
+        [Pizza setPreferredSize:small];
         return YES;
     }
     if([self.lowercaseString isEqualToString: @"medium"]) {
+        [Pizza setPreferredSize:medium];
         return YES;
     }
     if([self.lowercaseString isEqualToString: @"large"]) {
+        [Pizza setPreferredSize:large];
         return YES;
     }
     return NO;
 }
-
-- (enum pizzaSize)getSize {
-    if([self.lowercaseString isEqualToString: @"medium"]) {
-        return medium;
-    }
-    if([self.lowercaseString isEqualToString: @"large"]) {
-        return large;
-    }
-    return small;
-}
-
 @end
