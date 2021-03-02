@@ -4,4 +4,4 @@ It's similar to Yahtzee, but with much simpler scoring. To play, a player rolls 
 
 ![dice](https://user-images.githubusercontent.com/69213274/109603792-3a52e300-7ad7-11eb-8d19-d781778d5003.gif)
 
-![Screen Shot 2021-02-27 at 6 02 08 PM](https://user-images.githubusercontent.com/69213274/109405495-eead0780-7925-11eb-8675-9cee56ed7a0f.png)
+![Screen Shot 2021-03-01 at 10 06 51 PM](https://user-images.githubusercontent.com/69213274/109605731-7b002b80-7ada-11eb-9745-99c9288e23ce.png)
