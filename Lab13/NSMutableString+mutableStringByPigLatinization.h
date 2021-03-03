@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSMutableString (stringByPigLatinization)
 
-- (NSString *) stringByPigLatinization;
+- (NSString *) mutableStringByPigLatinization;
 
 @end
 

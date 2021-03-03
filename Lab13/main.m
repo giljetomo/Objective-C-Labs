@@ -7,13 +7,13 @@
 
 #import <Foundation/Foundation.h>
 #import "NSString+stringByPigLatinization.h"
-#import "NSMutableString+stringByPigLatinization.h"
+#import "NSMutableString+mutableStringByPigLatinization.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSMutableString *string = [@"Hello School Spray World Throw Sheep Quit Under Xcess Exempt Zebra Armor Btray Squat" mutableCopy];
         NSLog(@"ORIGINAL: %@", string);
-        NSLog(@"PIG LATINIZED: %@", [string stringByPigLatinization]);
+        NSLog(@"PIG LATINIZED: %@", [string mutableStringByPigLatinization]);
     }
     return 0;
 }

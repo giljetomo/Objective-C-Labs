@@ -5,11 +5,11 @@
 //  Created by Macbook Pro on 2021-03-02.
 //
 
-#import "NSMutableString+stringByPigLatinization.h"
+#import "NSMutableString+mutableStringByPigLatinization.h"
 
 @implementation NSMutableString (stringByPigLatinization)
 
-- (NSString *) stringByPigLatinization {
+- (NSString *) mutableStringByPigLatinization {
     
     for (NSString *word in [self componentsSeparatedByString:@" "]) {
         [self replaceCharactersInRange:[self rangeOfString:word] withString: (([[word substringToIndex:1].lowercaseString rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"aeiou"]].location != NSNotFound) ? [word stringByAppendingString:@"ay"] : (([@[@"sch", @"scr", @"shr", @"spl", @"spr", @"squ", @"str", @"thr"] containsObject:[word substringToIndex:3].lowercaseString]) ? [[word substringFromIndex:3] stringByAppendingFormat:@"%@ay ", [word substringToIndex:3]] : (([@[@"bl", @"br", @"ch", @"cl", @"cr", @"dr", @"fl", @"fr", @"gh", @"gl", @"gr", @"ng", @"ph", @"pl", @"pr", @"qu", @"sc", @"sh", @"sk", @"sl", @"sm", @"sn", @"sp", @"st", @"sw", @"th", @"tr", @"tw", @"wh", @"wr"] containsObject:[word substringToIndex:2].lowercaseString]) ? [[word substringFromIndex:2] stringByAppendingFormat:@"%@ay", [word substringToIndex:2]] : (([[word substringWithRange:NSMakeRange(1, 1)] rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"aeiou"]].location == NSNotFound) ? @"" : [[word substringFromIndex:1] stringByAppendingFormat:@"%@ay", [word substringToIndex:1]])))).capitalizedString];
