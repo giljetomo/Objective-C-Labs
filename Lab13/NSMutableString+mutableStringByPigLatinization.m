@@ -34,11 +34,12 @@
 //        NSString *secondLetter = [word substringWithRange:NSMakeRange(1, 1)];
 //        BOOL isSecondLetterConsonant = [secondLetter rangeOfCharacterFromSet:vowels].location == NSNotFound;
 //
-//        [pigLatinized appendString: (
+//        [self replaceCharactersInRange:[self rangeOfString:word] withString: (
 //          isVowel ? [word stringByAppendingString:@"ay "] : (
-//          isThreeCluster ? [[word substringFromIndex:3] stringByAppendingFormat:@"%@ay ", threeCluster] : (
-//          isTwoCluster ? [[word substringFromIndex:2] stringByAppendingFormat:@"%@ay ", cluster] : (
-//          isSecondLetterConsonant ? @"" : [[word substringFromIndex:1] stringByAppendingFormat:@"%@ay ", [word substringToIndex:1]])))).capitalizedString];
+//          isThreeCluster ? [[word substringFromIndex:3] stringByAppendingFormat:@"%@ay ",threeCluster] : (
+//          isTwoCluster ? [[word substringFromIndex:2] stringByAppendingFormat:@"%@ay ",cluster] : (
+//          isSecondLetterConsonant ? @"" : [[word substringFromIndex:1] stringByAppendingFormat:@"%@ay ",firstLetter])))
+//         ).capitalizedString];
     }
     return [self stringByReplacingOccurrencesOfString:@"  " withString:@" "];
 }
