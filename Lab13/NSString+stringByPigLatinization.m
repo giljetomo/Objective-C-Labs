@@ -2,7 +2,7 @@
 //  NSString+stringByPigLatinization.m
 //  Lab13
 //
-//  Created by Macbook Pro on 2021-02-26.
+//  Created by Gil Jetomo on 2021-02-26.
 //
 
 #import "NSString+stringByPigLatinization.h"
@@ -35,8 +35,8 @@
 //        NSString *secondLetter = [string substringWithRange:NSMakeRange(1, 1)];
 //        BOOL isSecondLetterConsonant = [secondLetter rangeOfCharacterFromSet:vowels].location == NSNotFound;
 //
-//        [pigLatinized appendString:
-//          (isVowel ? [string stringByAppendingString:@"ay "] : (
+//        [pigLatinized appendString: (
+//          isVowel ? [string stringByAppendingString:@"ay "] : (
 //          isThreeCluster ? [[string substringFromIndex:3] stringByAppendingFormat:@"%@ay ", threeCluster] : (
 //          isTwoCluster ? [[string substringFromIndex:2] stringByAppendingFormat:@"%@ay ", cluster] : (
 //          isSecondLetterConsonant ? @"" : [[string substringFromIndex:1] stringByAppendingFormat:@"%@ay ", [string substringToIndex:1]])))).capitalizedString];
