@@ -22,7 +22,7 @@
 //        BOOL isVowel = [firstLetter rangeOfCharacterFromSet:vowels].location != NSNotFound;
 //
 //        //check if a word begins in a two-letter cluster
-//        NSArray *clusters = @[@"ch", @"sh", @"sm", @"st", @"th", @"ps", @"ph", @"pl", @"gl"];
+//        NSArray *clusters = @[@"bl", @"br", @"ch", @"cl", @"cr", @"dr", @"fl", @"fr", @"gh", @"gl", @"gr", @"ng", @"ph", @"pl", @"pr", @"qu", @"sc", @"sh", @"sk", @"sl", @"sm", @"sn", @"sp", @"st", @"sw", @"th", @"tr", @"tw", @"wh", @"wr"];
 //        NSString *cluster = [string substringToIndex:2];
 //        BOOL isTwoCluster = [clusters containsObject:cluster.lowercaseString];
 //
