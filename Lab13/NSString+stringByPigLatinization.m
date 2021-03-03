@@ -12,34 +12,34 @@
 - (NSString *) stringByPigLatinization {
     NSMutableString *pigLatinized = [NSMutableString new];
     
-    for (NSString *str in [self componentsSeparatedByString:@" "]) {
-        [pigLatinized appendString: (([[str substringToIndex:1] rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"aeiou"]].location != NSNotFound) ? [str stringByAppendingString:@"ay "] : (([@[@"sch", @"scr", @"shr", @"spl", @"spr", @"squ", @"str", @"thr"] containsObject:[str substringToIndex:3].lowercaseString]) ? [[str substringFromIndex:3] stringByAppendingFormat:@"%@ay ", [str substringToIndex:3]] : (([@[@"bl", @"br", @"ch", @"cl", @"cr", @"dr", @"fl", @"fr", @"gh", @"gl", @"gr", @"ng", @"ph", @"pl", @"pr", @"qu", @"sc", @"sh", @"sk", @"sl", @"sm", @"sn", @"sp", @"st", @"sw", @"th", @"tr", @"tw", @"wh", @"wr"] containsObject:[str substringToIndex:2].lowercaseString]) ? [[str substringFromIndex:2] stringByAppendingFormat:@"%@ay ", [str substringToIndex:2]] : (([[str substringWithRange:NSMakeRange(1, 1)] rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"aeiou"]].location == NSNotFound) ? @"" : [[str substringFromIndex:1] stringByAppendingFormat:@"%@ay ", [str substringToIndex:1]])))).capitalizedString];
+    for (NSString *word in [self componentsSeparatedByString:@" "]) {
+        [pigLatinized appendString: (([[word substringToIndex:1].lowercaseString rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"aeiou"]].location != NSNotFound) ? [word stringByAppendingString:@"ay "] : (([@[@"sch", @"scr", @"shr", @"spl", @"spr", @"squ", @"str", @"thr"] containsObject:[word substringToIndex:3].lowercaseString]) ? [[word substringFromIndex:3] stringByAppendingFormat:@"%@ay ", [word substringToIndex:3]] : (([@[@"bl", @"br", @"ch", @"cl", @"cr", @"dr", @"fl", @"fr", @"gh", @"gl", @"gr", @"ng", @"ph", @"pl", @"pr", @"qu", @"sc", @"sh", @"sk", @"sl", @"sm", @"sn", @"sp", @"st", @"sw", @"th", @"tr", @"tw", @"wh", @"wr"] containsObject:[word substringToIndex:2].lowercaseString]) ? [[word substringFromIndex:2] stringByAppendingFormat:@"%@ay ", [word substringToIndex:2]] : (([[word substringWithRange:NSMakeRange(1, 1)] rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"aeiou"]].location == NSNotFound) ? @"" : [[word substringFromIndex:1] stringByAppendingFormat:@"%@ay ", [word substringToIndex:1]])))).capitalizedString];
         
 //        MARK: - Expanded Form
 //        //check if first character is a vowel
 //        NSCharacterSet *vowels = [NSCharacterSet characterSetWithCharactersInString:@"aeiou"];
-//        NSString *firstLetter = [string substringToIndex:1];
-//        BOOL isVowel = [firstLetter rangeOfCharacterFromSet:vowels].location != NSNotFound;
+//        NSString *firstLetter = [word substringToIndex:1];
+//        BOOL isVowel = [firstLetter.lowercaseString rangeOfCharacterFromSet:vowels].location != NSNotFound;
 //
 //        //check if a word begins in a two-letter cluster
 //        NSArray *clusters = @[@"bl", @"br", @"ch", @"cl", @"cr", @"dr", @"fl", @"fr", @"gh", @"gl", @"gr", @"ng", @"ph", @"pl", @"pr", @"qu", @"sc", @"sh", @"sk", @"sl", @"sm", @"sn", @"sp", @"st", @"sw", @"th", @"tr", @"tw", @"wh", @"wr"];
-//        NSString *cluster = [string substringToIndex:2];
+//        NSString *cluster = [word substringToIndex:2];
 //        BOOL isTwoCluster = [clusters containsObject:cluster.lowercaseString];
 //
 //        //check if a word begins in a three-letter cluster
 //        NSArray *threeClusters = @[@"sch", @"scr", @"shr", @"spl", @"spr", @"squ", @"str", @"thr"];
-//        NSString *threeCluster = [string substringToIndex:3];
+//        NSString *threeCluster = [word substringToIndex:3];
 //        BOOL isThreeCluster = [threeClusters containsObject:threeCluster.lowercaseString];
 //
 //        //sanitize invalid words
-//        NSString *secondLetter = [string substringWithRange:NSMakeRange(1, 1)];
+//        NSString *secondLetter = [word substringWithRange:NSMakeRange(1, 1)];
 //        BOOL isSecondLetterConsonant = [secondLetter rangeOfCharacterFromSet:vowels].location == NSNotFound;
 //
 //        [pigLatinized appendString: (
-//          isVowel ? [string stringByAppendingString:@"ay "] : (
-//          isThreeCluster ? [[string substringFromIndex:3] stringByAppendingFormat:@"%@ay ", threeCluster] : (
-//          isTwoCluster ? [[string substringFromIndex:2] stringByAppendingFormat:@"%@ay ", cluster] : (
-//          isSecondLetterConsonant ? @"" : [[string substringFromIndex:1] stringByAppendingFormat:@"%@ay ", [string substringToIndex:1]])))).capitalizedString];
+//          isVowel ? [word stringByAppendingString:@"ay "] : (
+//          isThreeCluster ? [[word substringFromIndex:3] stringByAppendingFormat:@"%@ay ", threeCluster] : (
+//          isTwoCluster ? [[word substringFromIndex:2] stringByAppendingFormat:@"%@ay ", cluster] : (
+//          isSecondLetterConsonant ? @"" : [[word substringFromIndex:1] stringByAppendingFormat:@"%@ay ", [word substringToIndex:1]])))).capitalizedString];
     }
     return pigLatinized;
 }
