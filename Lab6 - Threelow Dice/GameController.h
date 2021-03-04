@@ -2,7 +2,7 @@
 //  GameController.h
 //  Lab5 - Threelow Dice
 //
-//  Created by Macbook Pro on 2021-02-27.
+//  Created by Gil Jetomo on 2021-02-27.
 //
 
 #import <Foundation/Foundation.h>

@@ -2,7 +2,7 @@
 //  DivisionQuestion.m
 //  Lab3
 //
-//  Created by Macbook Pro on 2021-02-26.
+//  Created by Gil Jetomo on 2021-02-26.
 //
 
 #import "DivisionQuestion.h"

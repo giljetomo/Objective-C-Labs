@@ -2,7 +2,7 @@
 //  Contact.m
 //  Lab4
 //
-//  Created by Macbook Pro on 2021-02-25.
+//  Created by Gil Jetomo on 2021-02-25.
 //
 
 #import "Contact.h"
