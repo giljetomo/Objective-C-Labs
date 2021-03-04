@@ -7,6 +7,7 @@
 #import <Foundation/Foundation.h>
 #import "Pizza.h"
 @class Kitchen;
+@class DeliveryService;
 
 @protocol KitchenDelegate <NSObject>
 
@@ -22,7 +23,7 @@
 @interface Kitchen : NSObject
 @property (nonatomic, weak) id<KitchenDelegate> delegate;
 
-- (Pizza *)makePizzaWithSize:(enum pizzaSize)size toppings:(NSArray *)toppings;
+- (Pizza *)makePizzaWithSize:(enum pizzaSize)size toppings:(NSArray *)toppings deliveryService:(DeliveryService *)deliveryService;
 - (Pizza *)makeLargePepperoni;
 - (Pizza *)makeMeatLoversWithSize:(enum pizzaSize)size;
 @end

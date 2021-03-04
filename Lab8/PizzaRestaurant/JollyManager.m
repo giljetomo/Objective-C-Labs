@@ -7,6 +7,7 @@
 //
 
 #import "JollyManager.h"
+#import "DeliveryService.h"
 
 @implementation JollyManager
 
@@ -20,12 +21,15 @@
 }
 
 - (NSString *)kitchenDidMakePizza:(Pizza *)pizza {
-  return @"Jolly Manager completed baking your pizza in the kitchen.";
+  //return message for Lab11:
+  NSLog(@"Jolly Manager completed baking your pizza in the kitchen.");
+  [self.deliveryService deliverPizza:pizza];
+  return @"";
 }
 
 - (NSString *)description
 {
-  return @"Jolly Manager serves";
+  return @"Jolly Manager served";
 }
 
 @end

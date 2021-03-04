@@ -12,6 +12,8 @@
 		527BEE2D25F150B70008AAF6 /* SimpleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BEE2C25F150B70008AAF6 /* SimpleManager.m */; };
 		527BEE3225F153370008AAF6 /* JollyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BEE3125F153370008AAF6 /* JollyManager.m */; };
 		527BEE3625F154EF0008AAF6 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BEE3525F154EF0008AAF6 /* InputHandler.m */; };
+		527BEE4325F1851E0008AAF6 /* DeliveryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BEE4225F1851E0008AAF6 /* DeliveryService.m */; };
+		527BEE4725F185260008AAF6 /* DeliveryCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BEE4625F185260008AAF6 /* DeliveryCar.m */; };
 		6001EC81197B4EC300F97011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6001EC80197B4EC300F97011 /* Foundation.framework */; };
 		6001EC84197B4EC300F97011 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC83197B4EC300F97011 /* main.m */; };
 		6001EC90197B502F00F97011 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC8F197B502F00F97011 /* Kitchen.m */; };
@@ -40,6 +42,10 @@
 		527BEE3125F153370008AAF6 /* JollyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JollyManager.m; sourceTree = "<group>"; };
 		527BEE3425F154EF0008AAF6 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		527BEE3525F154EF0008AAF6 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		527BEE4125F1851E0008AAF6 /* DeliveryService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryService.h; sourceTree = "<group>"; };
+		527BEE4225F1851E0008AAF6 /* DeliveryService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryService.m; sourceTree = "<group>"; };
+		527BEE4525F185260008AAF6 /* DeliveryCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryCar.h; sourceTree = "<group>"; };
+		527BEE4625F185260008AAF6 /* DeliveryCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryCar.m; sourceTree = "<group>"; };
 		6001EC7D197B4EC300F97011 /* PizzaRestaurant */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PizzaRestaurant; sourceTree = BUILT_PRODUCTS_DIR; };
 		6001EC80197B4EC300F97011 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6001EC83197B4EC300F97011 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -93,6 +99,10 @@
 				527BED8025EDCE9E0008AAF6 /* Pizza.h */,
 				527BED8125EDCE9E0008AAF6 /* Pizza.m */,
 				527BEE2B25F150B70008AAF6 /* SimpleManager.h */,
+				527BEE4125F1851E0008AAF6 /* DeliveryService.h */,
+				527BEE4225F1851E0008AAF6 /* DeliveryService.m */,
+				527BEE4525F185260008AAF6 /* DeliveryCar.h */,
+				527BEE4625F185260008AAF6 /* DeliveryCar.m */,
 				527BEE2C25F150B70008AAF6 /* SimpleManager.m */,
 				527BEE3025F153370008AAF6 /* JollyManager.h */,
 				527BEE3425F154EF0008AAF6 /* InputHandler.h */,
@@ -167,10 +177,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				527BEE3625F154EF0008AAF6 /* InputHandler.m in Sources */,
+				527BEE4325F1851E0008AAF6 /* DeliveryService.m in Sources */,
 				527BED8D25EDDB6A0008AAF6 /* NSString+stringToPizzaSizeEnum.m in Sources */,
 				527BED8225EDCE9E0008AAF6 /* Pizza.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
 				527BEE2D25F150B70008AAF6 /* SimpleManager.m in Sources */,
+				527BEE4725F185260008AAF6 /* DeliveryCar.m in Sources */,
 				527BEE3225F153370008AAF6 /* JollyManager.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,
 			);

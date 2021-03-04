@@ -7,6 +7,7 @@
 //
 
 #import "SimpleManager.h"
+#import "DeliveryService.h"
 
 @implementation SimpleManager
 
@@ -25,9 +26,16 @@
   return NO;
 }
 
+- (NSString *)kitchenDidMakePizza:(Pizza *)pizza {
+  //return message for Lab11:
+  NSLog(@"Simple Manager completed baking your pizza in the kitchen.");
+  [self.deliveryService deliverPizza:pizza];
+  return @"";
+}
+
 - (NSString *)description
 {
-  return @"Simple Manager serves";
+  return @"Simple Manager served";
 }
 
 @end

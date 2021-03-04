@@ -11,10 +11,11 @@
 #import "SimpleManager.h"
 #import "JollyManager.h"
 #import "InputHandler.h"
+#import "DeliveryService.h"
 
-static void makePizza(Kitchen *restaurantKitchen, NSString *size, NSMutableArray<NSString *> *toppings) {
+static void makePizza(Kitchen *restaurantKitchen, NSString *size, NSMutableArray<NSString *> *toppings, DeliveryService *deliveryService) {
   enum pizzaSize pizzaSize = size.getSize;
-  Pizza *pizza = [restaurantKitchen makePizzaWithSize:pizzaSize toppings:toppings];
+  Pizza *pizza = [restaurantKitchen makePizzaWithSize:pizzaSize toppings:toppings deliveryService:deliveryService];
   
   if (pizza == nil) {
     NSLog(@"%@ no pizza right now.", restaurantKitchen.delegate);
@@ -36,6 +37,7 @@ int main(int argc, const char * argv[])
     Kitchen *restaurantKitchen = [Kitchen new];
     SimpleManager *simpleManager = [SimpleManager new];
     JollyManager *jollyManager = [JollyManager new];
+    DeliveryService *deliveryService = [DeliveryService new];
     
     while (TRUE) {
       // Loop forever
@@ -47,10 +49,12 @@ int main(int argc, const char * argv[])
       switch ([selectedManager integerValue]) {
         case 1: {
           restaurantKitchen.delegate = simpleManager;
+          [simpleManager setDeliveryService:deliveryService];
           break;
         }
         case 2: {
           restaurantKitchen.delegate = jollyManager;
+          [jollyManager setDeliveryService:deliveryService];
           break;
         }
         default:
@@ -92,11 +96,11 @@ int main(int argc, const char * argv[])
         NSString *toppingCombination = commandWords[1];
         if(size.isValidSize && [toppingCombination.lowercaseString isEqualToString:@"meatlovers"]) {
           //pizza's size will be upgraded if Jolly Manager was selected
-          makePizza(restaurantKitchen, size, [NSMutableArray arrayWithObjects:@"ham",@"cheese", nil]);
+          makePizza(restaurantKitchen, size, [NSMutableArray arrayWithObjects:@"ham",@"cheese", nil], nil);
           continue;
-//          Lab8 code:
-//          Pizza *pizza = [restaurantKitchen makeMeatLoversWithSize:[Pizza preferredSize]];
-//          NSLog(@"%@", pizza);
+          //          Lab8 code:
+          //          Pizza *pizza = [restaurantKitchen makeMeatLoversWithSize:[Pizza preferredSize]];
+          //          NSLog(@"%@", pizza);
         }
       }
       //guard
@@ -105,7 +109,11 @@ int main(int argc, const char * argv[])
         continue;
       }
       //make custom pizza with/without delegate
-      makePizza(restaurantKitchen, size, toppings);
+      makePizza(restaurantKitchen, size, toppings, deliveryService);
+      
+      if(deliveryService.pizzaList.count > 0) {
+        NSLog(@"\nDELIVERIES:\n%@", [deliveryService.deliveredPizzaList componentsJoinedByString:@"\n"]);
+      }
     }
   }
   return 0;

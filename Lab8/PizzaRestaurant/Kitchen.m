@@ -6,10 +6,11 @@
 
 #import "Kitchen.h"
 #import "Pizza.h"
+@class DeliveryService;
 
 @implementation Kitchen
 
-- (Pizza *)makePizzaWithSize:(enum pizzaSize)size toppings:(NSArray *)toppings
+- (Pizza *)makePizzaWithSize:(enum pizzaSize)size toppings:(NSArray *)toppings deliveryService:(DeliveryService *)deliveryService
 {
   if (self.delegate != nil) {
     if([self.delegate kitchen:self shouldMakePizzaOfSize:size andToppings:toppings]) {
@@ -17,7 +18,8 @@
         size = large;
       }
       if([self.delegate respondsToSelector:@selector(kitchenDidMakePizza:)]) {
-        NSLog(@"%@", [self.delegate kitchenDidMakePizza:nil]);
+        Pizza *pizza = [[Pizza new]initWithSize:size toppings:toppings];
+        NSLog(@"%@", [self.delegate kitchenDidMakePizza:pizza]);
       }
     } else {
       return nil;
