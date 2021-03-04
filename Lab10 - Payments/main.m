@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]) {
   @autoreleasepool {
     
     while (TRUE) {
-      float cost = arc4random_uniform(1001) + 100;
+      float cost = arc4random_uniform(901) + 100;
       NSString *input = [InputHandler prompt:[NSString stringWithFormat:
                                               @"\nThank you for shopping at Acme.com. "
                                               "Your total today is $%.2f. "
