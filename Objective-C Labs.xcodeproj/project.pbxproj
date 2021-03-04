@@ -873,6 +873,7 @@
 		527BEDB825F078D90008AAF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AYHFX5HL8Z;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -884,6 +885,7 @@
 		527BEDB925F078D90008AAF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AYHFX5HL8Z;
 				ENABLE_HARDENED_RUNTIME = YES;
