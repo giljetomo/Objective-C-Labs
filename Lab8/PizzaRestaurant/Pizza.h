@@ -11,14 +11,12 @@ enum pizzaSize {small, medium, large};
 @interface Pizza : NSObject
 @property (nonatomic) enum pizzaSize size;
 @property (nonatomic, strong) NSArray *toppings;
-@property (class) enum pizzaSize preferredSize;
 
 - (instancetype)initWithSize:(enum pizzaSize) size toppings:(NSArray *) toppings;
 + (instancetype)largePepperoni;
 + (instancetype)meatLoverWithSize:(enum pizzaSize) size;
 - (NSMutableArray *)getToppings;
-+ (enum pizzaSize)preferredSize;
-+ (void)setPreferredSize:(enum pizzaSize) size;
+- (enum pizzaSize)getSize;
 
 @end
 
